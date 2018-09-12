@@ -25,7 +25,7 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <form class="" action="minichat_post.php" method="post">
+  <form class="mt-3 ml-3 mb-3" action="minichat_post.php" method="post">
 
 
     <p>
@@ -59,14 +59,14 @@
   // Si tout va bien, on peut continuer
 
   // On récupère tout le contenu de la table jeux_video
-  $reponse = $bdd->query('SELECT * FROM minichat');
+  $reponse = $bdd->query('SELECT * FROM minichat ORDER BY id DESC LIMIT 0, 10');
 
   // On affiche chaque entrée une à une
   while ($donnees = $reponse->fetch())
   {
   ?>
-      <p>
-      <strong><?php echo $donnees['pseudo']; ?></strong> : <?php echo $donnees['message']; ?><br />
+      <p class="ml-3">
+      <strong><?php echo htmlspecialchars($donnees['pseudo']); ?></strong> : <?php echo htmlspecialchars($donnees['message']); ?><br />
      </p>
   <?php
   }
