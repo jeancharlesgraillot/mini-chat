@@ -25,7 +25,7 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <form class="mt-3 ml-3 mb-3" action="minichat_post.php" method="post">
+  <form class="mt-3 ml-3 mb-5" action="minichat_post.php" method="post">
 
 
     <p>
